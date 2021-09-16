@@ -39,6 +39,9 @@
                     <a class="nav-link" href="#" onclick="javascript:alert('Yet to be determined')">Buy EXBR</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="https://rarible.com/excaliburwallet?tab=onsale">Buy NFTs</a>
+                      </li>        
+                    <li class="nav-item">
                     <a class="nav-link" href="http://www.excaliburwallet.com/thegame/index.html" tabindex="-1">Play game</a>
                     </li>
                 </ul>
@@ -56,12 +59,12 @@
                     Quickly design and customize responsive mobile-first sites with Bootstrap, 
                     the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, 
                     responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.
-                </p>
-                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                    <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
-                    <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+                </p> -->
+                <div id="divButtons" class="d-grid gap-2 d-sm-flex justify-content-sm-center" style="padding-top: 10px;">
+                    <button id="btnPrevious" type="button" class="btn btn-primary btn-lg px-4 gap-3">Back</button>
+                    <button id="btnNext" type="button" class="btn btn-primary btn-lg px-4 gap-3">Next</button>
                 </div>
-            </div> -->
+            </div> 
         </div>
     </div>
 
@@ -78,48 +81,200 @@
 
         switch(params.section) {
             case 'create-wallet': {
+                document.title = 'Excalibur Wallet - Wallet';
                 document.getElementById('remaining-height').style.backgroundImage = "url('assets/Excalibur-Wallet.png')";
+                document.getElementById('btnNext').onclick = function() { location.href = 'https://etherscan.io/token/0xc91c52727eb1762e937b2d861bab62dbb6fd1431'; }
+                document.getElementById('btnPrevious').onclick = function () { location.href = 'index.html'; }
                 // document.getElementById('storyHeader').innerHTML = 'Excalibur Wallet';
                 break;
             }
             case 'our-vision': {
+                document.title = 'Excalibur Wallet - Vision';
                 document.getElementById('remaining-height').style.backgroundImage = "url('assets/Our-Vision.png')";
-                // document.getElementById('storyHeader').innerHTML = 'Our Vision';
+                document.getElementById('btnNext').style.display = 'none';
+                document.getElementById('btnPrevious').onclick = function () { location.href = 'index.html'; }
                 break;
             }
             case 'project-foundation': {
+                document.title = 'Excalibur Wallet - Foundation';
                 document.getElementById('remaining-height').style.backgroundImage = "url('assets/Project-Foundation.png')";
-                // document.getElementById('storyHeader').innerHTML = 'Project Foundation';
+                document.getElementById('btnNext').style.display = 'none';
+                document.getElementById('btnPrevious').onclick = function () { location.href = 'index.html'; }
                 break;
             }
             case 'charity': {
+                document.title = 'Excalibur Wallet - Charity';
                 document.getElementById('remaining-height').style.backgroundImage = "url('assets/Charity.png')";
-                // document.getElementById('storyHeader').innerHTML = 'Charity';
+                document.getElementById('btnNext').onclick = function () { location.href = 'info-page.html?section=charity-1'; }
+                document.getElementById('btnPrevious').onclick = function () { location.href = 'index.html'; }
+                break;
+            }
+            case 'charity-1': {
+                document.title = 'Excalibur Wallet - Charity';
+                document.getElementById('remaining-height').style.backgroundImage = "url('assets/Charity-Flowchart-1.png')";
+                document.getElementById('btnNext').onclick = function () { location.href = 'info-page.html?section=charity-2'; }
+                document.getElementById('btnPrevious').onclick = function () { location.href = 'info-page.html?section=charity'; }
+                break;
+            }
+            case 'charity-2': {
+                document.title = 'Excalibur Wallet - Charity';
+                document.getElementById('remaining-height').style.backgroundImage = "url('assets/Charity-Flowchart-2.png')";
+                document.getElementById('btnNext').onclick = function () { location.href = 'info-page.html?section=charity-3'; }
+                document.getElementById('btnPrevious').onclick = function () { location.href = 'info-page.html?section=charity-1'; }
+                break;
+            }
+            case 'charity-3': {
+                document.title = 'Excalibur Wallet - Charity';
+                document.getElementById('remaining-height').style.backgroundImage = "url('assets/Charity-Flowchart-3.png')";
+                document.getElementById('btnNext').onclick = function () { location.href = 'info-page.html?section=charity-4'; }
+                document.getElementById('btnPrevious').onclick = function () { location.href = 'info-page.html?section=charity-2'; }
+                break;
+            }
+            case 'charity-4': {
+                document.title = 'Excalibur Wallet - Charity';
+                document.getElementById('remaining-height').style.backgroundImage = "url('assets/Charity-Flowchart-4.png')";
+                document.getElementById('btnNext').onclick = function () { location.href = 'info-page.html?section=charity-5'; }
+                document.getElementById('btnPrevious').onclick = function () { location.href = 'info-page.html?section=charity-3'; }
+                break;
+            }
+            case 'charity-5': {
+                document.title = 'Excalibur Wallet - Charity';
+                document.getElementById('remaining-height').style.backgroundImage = "url('assets/Charity-Flowchart-5.png')";
+                document.getElementById('btnNext').onclick = function () { location.href = 'info-page.html?section=charity-6'; }
+                document.getElementById('btnPrevious').onclick = function () { location.href = 'info-page.html?section=charity-4'; }
+                break;
+            }
+            case 'charity-6': {
+                document.title = 'Excalibur Wallet - Charity';
+                document.getElementById('remaining-height').style.backgroundImage = "url('assets/Charity-Flowchart-6.png')";
+                document.getElementById('btnNext').onclick = function () { location.href = 'info-page.html?section=charity-7'; }
+                document.getElementById('btnPrevious').onclick = function () { location.href = 'info-page.html?section=charity-5'; }
+                break;
+            }
+            case 'charity-7': {
+                document.title = 'Excalibur Wallet - Charity';
+                document.getElementById('remaining-height').style.backgroundImage = "url('assets/Charity-Flowchart-7.png')";
+                document.getElementById('btnNext').style.display = 'none'; 
+                document.getElementById('btnPrevious').onclick = function () { location.href = 'info-page.html?section=charity-6'; }
                 break;
             }
             case 'freelancer': {
+                document.title = 'Excalibur Wallet - Freelancer';
                 document.getElementById('remaining-height').style.backgroundImage = "url('assets/Freelancer.png')";
-                // document.getElementById('storyHeader').innerHTML = 'Freelancer';
+                document.getElementById('btnNext').onclick = function () { location.href = 'info-page.html?section=freelancer-1'; }
+                document.getElementById('btnPrevious').onclick = function () { location.href = 'index.html'; }
+                break;
+            }
+            case 'freelancer-1': {
+                document.title = 'Excalibur Wallet - Freelancer';
+                document.getElementById('remaining-height').style.backgroundImage = "url('assets/Freelancer-Flowchart-1.png')";
+                document.getElementById('btnNext').onclick = function () { location.href = 'info-page.html?section=freelancer-2'; }
+                document.getElementById('btnPrevious').onclick = function () { location.href = 'info-page.html?section=freelancer'; }
+                break;
+            }
+            case 'freelancer-2': {
+                document.title = 'Excalibur Wallet - Charity';
+                document.getElementById('remaining-height').style.backgroundImage = "url('assets/Freelancer-Flowchart-2.png')";
+                document.getElementById('btnNext').onclick = function () { location.href = 'info-page.html?section=freelancer-3'; }
+                document.getElementById('btnPrevious').onclick = function () { location.href = 'info-page.html?section=freelancer-1'; }
+                break;
+            }
+            case 'freelancer-3': {
+                document.title = 'Excalibur Wallet - Freelancer';
+                document.getElementById('remaining-height').style.backgroundImage = "url('assets/Freelancer-Flowchart-3.png')";
+                document.getElementById('btnNext').onclick = function () { location.href = 'info-page.html?section=freelancer-4'; }
+                document.getElementById('btnPrevious').onclick = function () { location.href = 'info-page.html?section=freelancer-2'; }
+                break;
+            }
+            case 'freelancer-4': {
+                document.title = 'Excalibur Wallet - Freelancer';
+                document.getElementById('remaining-height').style.backgroundImage = "url('assets/Freelancer-Flowchart-4.png')";
+                document.getElementById('btnNext').onclick = function () { location.href = 'info-page.html?section=freelancer-5'; }
+                document.getElementById('btnPrevious').onclick = function () { location.href = 'info-page.html?section=freelancer-3'; }
+                break;
+            }
+            case 'freelancer-5': {
+                document.title = 'Excalibur Wallet - Freelancer';
+                document.getElementById('remaining-height').style.backgroundImage = "url('assets/Freelancer-Flowchart-5.png')";
+                document.getElementById('btnNext').onclick = function () { location.href = 'info-page.html?section=freelancer-6'; }
+                document.getElementById('btnPrevious').onclick = function () { location.href = 'info-page.html?section=freelancer-4'; }
+                break;
+            }
+            case 'freelancer-6': {
+                document.title = 'Excalibur Wallet - Freelancer';
+                document.getElementById('remaining-height').style.backgroundImage = "url('assets/Freelancer-Flowchart-6.png')";
+                document.getElementById('btnNext').onclick = function () { location.href = 'info-page.html?section=freelancer-7'; }
+                document.getElementById('btnPrevious').onclick = function () { location.href = 'info-page.html?section=freelancer-5'; }
+                break;
+            }
+            case 'freelancer-7': {
+                document.title = 'Excalibur Wallet - Freelancer';
+                document.getElementById('remaining-height').style.backgroundImage = "url('assets/Freelancer-Flowchart-7.png')";
+                document.getElementById('btnNext').style.display = 'none'; 
+                document.getElementById('btnPrevious').onclick = function () { location.href = 'info-page.html?section=freelancer-6'; }
                 break;
             }
             case 'business': {
+                document.title = 'Excalibur Wallet - Business';
                 document.getElementById('remaining-height').style.backgroundImage = "url('assets/Business.png')";
                 // document.getElementById('storyHeader').innerHTML = 'Business';
                 break;
             }
             case 'roadmap': {
+                document.title = 'Excalibur Wallet - Roadmap';
                 document.getElementById('remaining-height').style.backgroundImage = "url('assets/Roadmap.png')";
-                // document.getElementById('storyHeader').innerHTML = 'Roadmap';
+                document.getElementById('btnNext').style.display = 'none';
+                document.getElementById('btnPrevious').onclick = function () { location.href = 'index.html'; }
                 break;
             }
             case 'excalibur-token': {
+                document.title = 'Excalibur Wallet - Token';
                 document.getElementById('remaining-height').style.backgroundImage = "url('assets/Excalibur-Token.png')";
-                // document.getElementById('storyHeader').innerHTML = 'Excalibur Token';
+                document.getElementById('btnNext').style.display = 'none';
+                document.getElementById('btnPrevious').onclick = function () { location.href = 'index.html'; }                
+                break;
+            }
+
+            case 'excalibur-token-1': {
+                document.title = 'Excalibur Wallet - Token';
+                document.getElementById('remaining-height').style.backgroundImage = "url('assets/Excalibur-Token-Specs.png')";
+                document.getElementById('btnNext').style.display = 'none';
+                document.getElementById('btnPrevious').onclick = function () { location.href = 'info-page.html?section=excalibur-token'; }
+                break;
+            }
+            case 'nfts': {
+                document.title = 'Excalibur Wallet - NFTs';
+                document.getElementById('remaining-height').style.backgroundImage = "url('assets/NFT-2FA-collection.png')";
+                document.getElementById('btnNext').onclick = function () { location.href = 'info-page.html?section=nfts-1'; }
+                document.getElementById('btnPrevious').onclick = function () { location.href = 'index.html'; }
+                break;
+            }
+            case 'nfts-1': {
+                document.title = 'Excalibur Wallet - NFTs';
+                document.getElementById('remaining-height').style.backgroundImage = "url('assets/NFT-2FA-Collection-Specs.png')";
+                document.getElementById('btnNext').onclick = function () { location.href = 'info-page.html?section=nfts-2'; }
+                document.getElementById('btnPrevious').onclick = function () { location.href = 'info-page.html?section=nfts'; }
+                break;
+            }
+            case 'nfts-2': {
+                document.title = 'Excalibur Wallet - NFTs';
+                document.getElementById('remaining-height').style.backgroundImage = "url('assets/NFT-2FA-Collection-Specs-2.png')";
+                document.getElementById('btnNext').style.display = 'none';
+                document.getElementById('btnPrevious').onclick = function () { location.href = 'info-page.html?section=nfts-1'; }
                 break;
             }
             case 'excalibur-team': {
+                document.title = 'Excalibur Wallet - Team';
                 document.getElementById('remaining-height').style.backgroundImage = "url('assets/Excalibur-team.png')";
-                // document.getElementById('storyHeader').innerHTML = 'Excalibur Team';
+                document.getElementById('btnNext').style.display = 'none';
+                document.getElementById('btnPrevious').onclick = function () { location.href = 'info-page.html?section=nfts-1'; }
+                break;
+            }
+            case 'upcoming-plans': {
+                document.title = 'Excalibur Wallet - Team';
+                document.getElementById('remaining-height').style.backgroundImage = "url('assets/Upcoming-Plans.png')";
+                document.getElementById('btnNext').style.display = 'none';
+                document.getElementById('btnPrevious').onclick = function () { location.href = 'index.html'; }
                 break;
             }
             default: {

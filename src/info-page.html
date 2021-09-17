@@ -19,6 +19,17 @@
         height: calc(100% - 100px);
         background-color: #000;
       }
+
+      #myStory {
+          color: #fff;
+          padding-left: 230px;
+      }
+
+      #storyHeader {
+          color: #fff;
+          text-align: center;
+      }
+
     </style>
   </head>
   <body>
@@ -42,7 +53,7 @@
                         <a class="nav-link" onclick="window.open('https://rarible.com/excaliburwallet?tab=onsale', '_blank').focus();" href="#">Buy NFTs</a>
                       </li>        
                     <li class="nav-item">
-                        <a class="nav-link" onclick="window.open('http://www.excaliburwallet.com/thegame/index.html', '_blank').focus();" href="#">Play game</a>
+                        <a class="nav-link" onclick="window.open('thegame/index.html', '_blank').focus();" href="#">Play game</a>
                     </li>
                 </ul>
                 </div>
@@ -53,18 +64,18 @@
 
     <div id="remaining-height" style="background-size: contain; background-repeat: no-repeat;">
         <div id="divStory">
-            <h1 id="storyHeader"></h1>
-<!--            <div class="col-lg-6 mx-auto">
-                <p class="lead mb-4">
-                    Quickly design and customize responsive mobile-first sites with Bootstrap, 
-                    the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, 
-                    responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.
-                </p> -->
                 <div id="divButtons" class="d-grid gap-2 d-sm-flex justify-content-sm-center" style="padding-top: 10px;">
                     <button id="btnPrevious" type="button" class="btn btn-primary btn-lg px-4 gap-3">&laquo;</button>
                     <button id="btnNext" type="button" class="btn btn-primary btn-lg px-4 gap-3">&raquo;</button>
                 </div>
-            </div> 
+                <h1 id="storyHeader" style="display:none">My Header</h1>
+                <div id="myStory" style="display: none;" class="col-lg-6 mx-auto">
+                    <p class="lead mb-4">
+                        Quickly design and customize responsive mobile-first sites with Bootstrap, 
+                        the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, 
+                        responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.
+                    </p>
+                </div> 
         </div>
     </div>
 
@@ -217,7 +228,8 @@
             case 'business': {
                 document.title = 'Excalibur Wallet - Business';
                 document.getElementById('remaining-height').style.backgroundImage = "url('assets/Business.png')";
-                // document.getElementById('storyHeader').innerHTML = 'Business';
+                document.getElementById('btnNext').style.display = 'none'; 
+                document.getElementById('btnPrevious').onclick = function () { location.href = 'index.html'; }
                 break;
             }
             case 'roadmap': {

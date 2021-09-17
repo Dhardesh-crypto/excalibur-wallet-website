@@ -39,10 +39,10 @@
                     <a class="nav-link" href="#" onclick="javascript:alert('Yet to be determined')">Buy EXBR</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://rarible.com/excaliburwallet?tab=onsale">Buy NFTs</a>
+                        <a class="nav-link" onclick="window.open('https://rarible.com/excaliburwallet?tab=onsale', '_blank').focus();" href="#">Buy NFTs</a>
                       </li>        
                     <li class="nav-item">
-                    <a class="nav-link" href="http://www.excaliburwallet.com/thegame/index.html" tabindex="-1">Play game</a>
+                        <a class="nav-link" onclick="window.open('http://www.excaliburwallet.com/thegame/index.html', '_blank').focus();" href="#">Play game</a>
                     </li>
                 </ul>
                 </div>
@@ -61,8 +61,8 @@
                     responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.
                 </p> -->
                 <div id="divButtons" class="d-grid gap-2 d-sm-flex justify-content-sm-center" style="padding-top: 10px;">
-                    <button id="btnPrevious" type="button" class="btn btn-primary btn-lg px-4 gap-3">Back</button>
-                    <button id="btnNext" type="button" class="btn btn-primary btn-lg px-4 gap-3">Next</button>
+                    <button id="btnPrevious" type="button" class="btn btn-primary btn-lg px-4 gap-3">&laquo;</button>
+                    <button id="btnNext" type="button" class="btn btn-primary btn-lg px-4 gap-3">&raquo;</button>
                 </div>
             </div> 
         </div>
@@ -83,7 +83,7 @@
             case 'create-wallet': {
                 document.title = 'Excalibur Wallet - Wallet';
                 document.getElementById('remaining-height').style.backgroundImage = "url('assets/Excalibur-Wallet.png')";
-                document.getElementById('btnNext').onclick = function() { location.href = 'https://etherscan.io/token/0xc91c52727eb1762e937b2d861bab62dbb6fd1431'; }
+                document.getElementById('btnNext').onclick = function() { window.open('https://etherscan.io/token/0xc91c52727eb1762e937b2d861bab62dbb6fd1431', '_blank').focus(); }
                 document.getElementById('btnPrevious').onclick = function () { location.href = 'index.html'; }
                 // document.getElementById('storyHeader').innerHTML = 'Excalibur Wallet';
                 break;
